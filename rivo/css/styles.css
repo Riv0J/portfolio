@@ -4,10 +4,22 @@
     --gris_fondo: #1f1f1f;
     --azul: #4576ff;
     --celeste: #a1ffeb;
+    --neon: #2897ff;
 }
 *{ font-family: 'Fira Sans'; }
 body{
     background-color: var(--gris_fondo2);
+}
+i{
+    font-size: 1.5rem;
+    transition: all 1s;
+}
+.icon_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
 }
 #nav{
     color: whitesmoke;
@@ -16,49 +28,75 @@ header{
     display: flex;
     justify-content: space-between;
     background-color: var(--gris_fondo);
+    padding-inline: 2rem;
 }
 #nombre, #menu{
-    padding: 1rem;
     gap: 1.5rem;
+}
+header aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #nombre{
     display: flex;
     flex-direction: row;
-    gap: 2rem;
     text-align: left;
     align-items: center;
     justify-content: start;
     font-family: 'Fire Sans';
-
+    width: fit-content;
     letter-spacing: 0.05rem;
     font-family: 'Fira Sans';
     font-weight: 600;
     font-size: 1.2rem;
 }
+#logo{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.image_container{
+    position: absolute;
+    background-image: url("../img/perfil.png");
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el elemento */
+    background-position: center; /* Centra la imagen horizontalmente y verticalmente */
+    width: 78%;
+    height: 78%; 
+  }
+svg{
+    width: 100%;
+    height: 100%;
+    fill: var(--neon);
+    
+}
 #menu{
     padding: 1rem;
     gap: 1.5rem;
+    font-size: 1.2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 #menu > *{
-    padding-inline: 2rem;
+    padding-inline: 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 10rem;
+    font-size: 1.2rem;
+    white-space: nowrap;
 }
 .deplegable_titulo{
     gap: 0.5rem;
+    padding: 0.5rem;
+    padding-inline: 0.75rem;
 }
 .desplegable{
     display: flex;
-    flex-direction: column;
-    outline: solid 0.1rem black;
     position: relative;
-}
-.desplegable > *{
-    padding: 0.5rem;
-    padding-inline: 0.75rem;
 }
 .desplegable_options{
     position: absolute;
@@ -66,12 +104,12 @@ header{
     flex-direction: column;
     width: 100%;
     top: 100%;
+    background-color: var(--gris_fondo2);
+    border-radius: 0.2rem;
 }
-.desplegable_options > *{
-    padding: 0.5rem;
-}
-.hex::before {
-    content: "\2B22";
-    color: var(--celeste);
-    font-size:135px;
+.desplegable_option{
+    padding: 0.75rem;
+    letter-spacing: 0.2rem;
+    border-bottom: 0.1rem black solid;
+    margin-inline: 1rem;
 }

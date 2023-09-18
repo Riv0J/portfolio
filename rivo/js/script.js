@@ -5,6 +5,9 @@ function initPortfolio(){
         const desplegable = desplegables[i];
         console.log(desplegable);
 
+        const desplegable_icon = desplegable.querySelector("i");
+        console.log(desplegable_icon);
+
         const titles = desplegable.getElementsByClassName('deplegable_titulo');
         const title = titles[0];
         console.log(title);
@@ -14,11 +17,20 @@ function initPortfolio(){
 
         desplegable.addEventListener('mouseenter', () => {
             toggleDisplay(options,'block');
+            if(desplegable_icon){
+                assignIcon(desplegable_icon,'arrow_down');
+            }
+            
         });
         desplegable.addEventListener('mouseleave', () => {
             toggleDisplay(options,'none');
+            if(desplegable_icon){
+                assignIcon(desplegable_icon,'arrow_up');
+            }
         });
     }
+
+    populateIconClasses();
 }
 function toggleDisplay(elements_array, new_display){
     let counter = 1;
@@ -35,6 +47,7 @@ function toggleDisplay(elements_array, new_display){
                 break;
         }
         counter+=1;
+        setTimeout(() => {}, 1000);
         option.style.display = new_display; 
 
     }
