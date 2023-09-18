@@ -2,17 +2,40 @@
 :root {
     --gris_fondo2: rgb(46, 46, 46);
     --gris_fondo: #1f1f1f;
+    --white:whitesmoke;
     --azul: #4576ff;
     --celeste: #a1ffeb;
     --neon: #2897ff;
 }
-*{ font-family: 'Fira Sans'; }
+html {
+    scroll-behavior: smooth;
+}
 body{
     background-color: var(--gris_fondo2);
+    color: var(--white);
+    font-family: 'Raleway';
+}
+main section:first-child {
+    padding-top: 7vh;
+}
+section{
+    padding-inline: 5rem;
+}
+h3{
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+h4{
+    font-family: 'Fira Sans';
+    font-weight: 200;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
 }
 i{
     font-size: 1.5rem;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 .icon_title{
     display: flex;
@@ -22,21 +45,26 @@ i{
     gap: 1rem;
 }
 #nav{
-    color: whitesmoke;
-}
-header{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     background-color: var(--gris_fondo);
     padding-inline: 2rem;
+    position: fixed;
+    width: 100%;
+    transition: all 1s;
+    color: whitesmoke;
+    z-index: 1000;
+    height: 7vh;
 }
 #nombre, #menu{
     gap: 1.5rem;
 }
-header aside {
-    display: flex;
+#personal {
+    display: none;
+    opacity: 0;
     justify-content: center;
     align-items: center;
+    transition: all 1s;
 }
 #nombre{
     display: flex;
@@ -45,36 +73,50 @@ header aside {
     align-items: center;
     justify-content: start;
     font-family: 'Fire Sans';
-    width: fit-content;
-    letter-spacing: 0.05rem;
-    font-family: 'Fira Sans';
-    font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-family: 'Raleway';
+    font-weight: 500;
     font-size: 1.2rem;
 }
 #logo{
-    width: 10%;
+    width: 3rem;
+    aspect-ratio: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 0;
 }
-.image_container{
+#logo .image_container{
     position: absolute;
-    background-image: url("../img/perfil.png");
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el elemento */
-    background-position: center; /* Centra la imagen horizontalmente y verticalmente */
+    background-image: url("../img/perfil3.png");
+    background-size: 95%;
     width: 78%;
     height: 78%; 
-  }
+}
 svg{
     width: 100%;
     height: 100%;
     fill: var(--neon);
-    
+}
+.halo::after{
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+    width: 70%;
+    height: 75%;
+    background-image: linear-gradient(to top, #0066ff, rgba(0, 0, 0, 0));
+    background-size: cover;
+    z-index: -1;
+    border-radius: 5rem;
 }
 #menu{
-    padding: 1rem;
+    opacity: 1;
+    transition: all 1s;
+    padding: 0.3rem;
     gap: 1.5rem;
+    font-family: 'Fira Sans';
     font-size: 1.2rem;
     display: flex;
     flex-direction: row;
@@ -100,16 +142,95 @@ svg{
 }
 .desplegable_options{
     position: absolute;
-    display: flex;
     flex-direction: column;
     width: 100%;
     top: 100%;
-    background-color: var(--gris_fondo2);
-    border-radius: 0.2rem;
+    background-color: var(--gris_fondo);
+    border-radius: 0.5rem;
+    display: none;
+    border-bottom: 0.1rem black solid;
+
 }
 .desplegable_option{
     padding: 0.75rem;
+    transition: all 0.2s;
+    
+}
+.siglas{
     letter-spacing: 0.2rem;
-    border-bottom: 0.1rem black solid;
-    margin-inline: 1rem;
+}
+.app_hover:hover{
+    transition: all 0.4s;
+    color: var(--azul);
+}
+.full_section{
+    height: 100svh;
+}
+
+#introduce_myself{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding-right: 0;
+}
+#introduce_myself article{
+    position: relative;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+#competencias{
+    font-family: 'Varela Round';
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.gradient_background{
+    position: relative;
+}
+.gradient_background::after{
+    position: absolute;
+    content: '';
+    inset: 0;
+    width: 100%;
+    background-image: linear-gradient(to right bottom, #4576ff, #4f63c579, #4b508f75, #403e5c7d, #2e2e2e);
+    z-index: -1;
+}
+#introduce_myself .image_container{
+    height: 100%;
+
+}
+.image_container svg{
+    aspect-ratio: 1;
+    fill: var(--neon);
+    scale: 1.5;
+    translate: 10%;
+    animation: entrance 1s ease;
+}
+#introduce_myself .image_container{
+
+}
+#introduce_myself .image_container::before{
+    content: '';
+    position: absolute;
+    inset: 15%;
+    top: 5%;
+    background-image: url("../img/perfil3.png");
+    background-size: 95%;
+    width: 78%;
+    height: 78%;
+
+    animation: entrance 1s ease;
+}
+@keyframes entrance {
+    from{
+        transform: translate(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0);
+        opacity: 1;
+    }
 }
