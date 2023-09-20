@@ -60,6 +60,7 @@ function initDictionary(){
         "settings": "ri-settings-5-line",
         "settings2": "ri-settings-4-line",
         "statistics": "ri-bar-chart-2-line",
+        "burger_menu": "ri-menu-line",
         "html5":"ri-html5-line",
         "css3":"ri-css3-line",
         "js":"ri-javascript-line",

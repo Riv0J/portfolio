@@ -90,6 +90,8 @@ i{
 #logo .image_container{
     position: absolute;
     background-image: url("../img/perfil3.png");
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: 95%;
     width: 78%;
     height: 78%; 
