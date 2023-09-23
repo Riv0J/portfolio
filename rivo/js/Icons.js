@@ -15,7 +15,6 @@ function populateIconClasses() {
 function assignIcon(icon_element, icon_name){
     const icon_class = getIconClass(icon_name);
     icon_element.className = icon_class;
-    console.log(icon_name);
 }
 function getIconClass(icon_name){
     if(!icons_dictionary){

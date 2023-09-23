@@ -1,10 +1,7 @@
 const RESPONSIVE_WIDTH = 768;
-
-let header_initial_justify = 'center';
-let header_status = 'initial';
 let header_element = document.getElementById('nav');
 let personal_element = document.getElementById('personal');
-let menu = document.getElementById('menu');
+let desktop_menu = document.getElementById('desktop_menu');
 
 //responsive variables
 let responsive_menu_button = document.getElementById("responsive_menu_button");
@@ -16,26 +13,17 @@ function initPortfolio(){
     responsive_mode = isWindowSizeResponsive();
     header_element = document.getElementById('nav'); 
     personal_element = document.getElementById('personal');
-    menu = document.getElementById('menu');
+    desktop_menu = document.getElementById('desktop_menu');
     
     responsive_menu_button = document.getElementById("responsive_menu_button");
-    desktop_menu_items_array = Array.from(menu.children).filter(item => item.id !== "responsive_menu_button");
+    desktop_menu_items_array = Array.from(desktop_menu.children).filter(item => item.id !== "responsive_menu_button");
 
     const desplegables = document.getElementsByClassName('desplegable');
+
     addDropdownListeners(desplegables);
 
-    if(responsive_mode == false){
-        header_initial_justify = 'center';
-        layoutPC('apply');
-        layoutResponsive('remove');
-    } else if(responsive_mode == true){
-        header_initial_justify = 'flex-end';
-        layoutResponsive('apply');
-        layoutPC('remove');
-    }
-    console.log(responsive_mode);
     window.addEventListener('scroll', () => {
-        const posicionScroll = window.scrollY; 
+        /*const posicionScroll = window.scrollY; 
         let new_status;
         if (posicionScroll > 200) {
             new_status ='scrolled';
@@ -46,26 +34,10 @@ function initPortfolio(){
             return;
         };
         header_status = new_status;
-        adjustHeader(new_status);
+        adjustHeader(new_status);*/
     }); 
-    window.addEventListener('resize', () => {
-        const window_resize_responsive = isWindowSizeResponsive();
-        if(window_resize_responsive == responsive_mode){
-            return;
-        }
-        if(responsive_mode == false){
-            header_initial_justify = 'center';
-            layoutPC('apply');
-            layoutResponsive('remove');
-        } else {
-            header_initial_justify = 'flex-end';
-            layoutResponsive('apply');
-            layoutPC('remove');
-        }
-        responsive_mode = window_resize_responsive;
-        console.log("responsive change, new mode: "+responsive_mode);
-    });
     populateIconClasses();
+    applyTextRevealEffect();
 }
 function toggleDisplay(elements_array, new_display){
     let counter = 1;
@@ -95,19 +67,19 @@ function adjustHeader(new_state) {
         case 'initial':
             header_element.style.justifyContent = header_initial_justify;
             personal_element.style.display = 'none';
-            menu.style.opacity = 0;
+            desktop_menu.style.opacity = 0;
             window.setTimeout(function() {
                 personal_element.style.opacity = 0;
-                menu.style.opacity = 1;
+                desktop_menu.style.opacity = 1;
             }, 50);
             break;
         case 'scrolled':
             header_element.style.justifyContent = 'space-between';
             personal_element.style.display = 'flex';
-            menu.style.opacity = 0;
+            desktop_menu.style.opacity = 0;
             window.setTimeout(function() {
                 personal_element.style.opacity = 1;
-                menu.style.opacity = 1;
+                desktop_menu.style.opacity = 1;
             }, 50);
             break;
         default:
@@ -115,40 +87,6 @@ function adjustHeader(new_state) {
             break;
     }
     
-}
-function layoutPC(action){
-    switch (action) {
-        case 'remove':
-            toggleDesktopMenuItems('none')
-            break;
-        case 'apply':
-            toggleDesktopMenuItems('flex')
-            break;
-        default:
-            break;
-    }
-}
-function layoutResponsive(action){
-    switch (action) {
-        case 'remove':
-            toggleResponsiveMenu('none');
-            break;
-        case 'apply':
-            toggleResponsiveMenu('flex');
-            console.log('a');
-            header_element.style.justifyContent = header_initial_justify;
-            break;
-        default:
-            break;
-    }
-}
-function toggleResponsiveMenu(new_display){
-    responsive_menu_button.style.display = new_display;
-}
-function toggleDesktopMenuItems(new_display){
-    desktop_menu_items_array.forEach(item => {
-        item.style.display = new_display;
-    });
 }
 function isWindowSizeResponsive() {
     return window.innerWidth <= RESPONSIVE_WIDTH;
@@ -170,6 +108,8 @@ function addDropdownListeners(desplegables){
         const options = desplegable.getElementsByClassName('desplegable_option');
         toggleDisplay(options,'none');
 
+        let desplegable_status = closed;
+
         desplegable.addEventListener('mouseenter', () => {
             if(options_container){
                 options_container.style.display = 'flex';
@@ -188,9 +128,61 @@ function addDropdownListeners(desplegables){
                 }
             }   
         });
+        desplegable.addEventListener('click', () => {
+            if (options_container) {
+                const current_display = options_container.style.display;
+                console.log(current_display);
+                if (current_display === 'none' || current_display === '') {
+                    options_container.style.display = 'flex';
+                    toggleDisplay(options, 'flex');
+                    if (desplegable_icon) {
+                        rotateElement(desplegable_icon, '180deg'); // Gira el ícono 180 grados (o el valor que prefieras)
+                    }
+                } else {
+                    options_container.style.display = 'none';
+                    toggleDisplay(options, 'none');
+                    if (desplegable_icon) {
+                        rotateElement(desplegable_icon, '0'); // Vuelve a la posición original
+                    }
+                }
+            }
+        });
     }
 }
 
 function rotateElement(element, degrees){
     element.style.rotate = degrees+'deg';
+}
+
+function escribirCodigo(texto, elementoHTML) {
+    let indice = 0;
+    const velocidadMinima = 5; // Tiempo mínimo entre cada letra (en milisegundos)
+    let velocidadMaxima = 95; // Tiempo máximo entre cada letra (en milisegundos)
+  
+    // Verificar si el texto es un título (menos de 15 caracteres)
+    if (texto.length < 15) {
+      velocidadMaxima = velocidadMaxima / 2; // Reducir la velocidad máxima a la mitad
+    }
+    
+    function escribirCaracter() {
+      if (indice < texto.length) {
+        const tiempoAleatorio = Math.random() * (velocidadMaxima - velocidadMinima) + velocidadMinima;
+        setTimeout(() => {
+          elementoHTML.innerHTML += texto.charAt(indice);
+          indice++;
+          escribirCaracter();
+        }, tiempoAleatorio);
+      }
+    }
+    
+    escribirCaracter();
+}
+function applyTextRevealEffect() {
+    const elementos = document.querySelectorAll('.code_reveal_effect');
+
+    elementos.forEach(elemento => {
+        const text_reveal = elemento.textContent;
+        elemento.textContent = '';
+        escribirCodigo(text_reveal,elemento);
+    });
 }
