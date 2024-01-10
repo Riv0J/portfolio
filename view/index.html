@@ -6,7 +6,6 @@
     <title>Rivo | Portfolio</title>
     <link rel="stylesheet" href="../public/css/normalize.css">
     <link rel="stylesheet" href="../public/css/styles.css">
-    <script src="../js/portfolio.js"></script>
 </head>
 <body>
     <header id="nav">
@@ -49,8 +48,15 @@
     <main>
         <section id="introduce_myself" class="full_section gradient_background">
             <article class="text_container">
-                <div class="profile_window"> </div>
-                <h3 class="code_reveal_effect">Rivo José Molina Uriarte</h3>
+                <div class="double_title">
+                    <h3 class="code_reveal_effect">Hola, soy</h3>
+                    <h2 class="code_reveal_effect">Rivo José</h2>
+                </div>
+
+                <div class="profile_window">
+                    <div class="portrait"></div>
+                </div>
+
                 <h4 class="code_reveal_effect">Desarrollo de aplicaciones web</h4>
                 <div id="competencias">
                     <div class="competencia icon_title">
@@ -95,9 +101,20 @@
     <footer>
     </footer>
 </body>
-<script src="../js/Icons.js"></script>
+<script src="../public/js/Icons.js"></script>
+<script src="../public/js/portfolio.js"></script>
 <script>
-    initPortfolio()
+    document.addEventListener('DOMContentLoaded', function() {
+        initPortfolio();
+    });
+
+    SetNavOffSet();
+    function SetNavOffSet(){
+        const nav = document.getElementById('nav');
+        const alturaNav = nav.offsetHeight;
+
+        document.querySelector('section').style.paddingTop = `${alturaNav}px`;
+    }
 </script>
 <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">

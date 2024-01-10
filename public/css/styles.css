@@ -25,22 +25,34 @@ p{
     line-height: 1.2;
 }
 main section:first-child {
-    padding-top: 7vh;
 }
 section{
-    padding-inline: 5rem;
 }
-h3{
+h2{
     font-family: 'Raleway';
     font-weight: 600;
     font-size: 2rem;
     letter-spacing: 0.2rem;
+    transform: scaleY(1.15);
+}
+h3{
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
 }
 h4{
     font-family: 'Fira Sans';
     font-weight: 200;
     font-size: 1.5rem;
     letter-spacing: 0.05rem;
+}
+.double_title {
+    
+}
+.double_title :first-child{
+    margin-bottom: 0.25rem;
+    transform: translate(-1rem);
 }
 img{
     width: 100%;
@@ -142,7 +154,7 @@ button{
     transition: all 1s;
     color: whitesmoke;
     z-index: 1000;
-    height: 7vh;
+    padding-block: 0.5rem;
 }
 #nombre, #desktop_menu{
     gap: 0.5rem;
@@ -209,6 +221,7 @@ button{
     flex-direction: row;
     justify-content: space-between;
 }
+
 #desktop_menu > *{
     padding-inline: 0.5rem;
     display: flex;
@@ -316,8 +329,6 @@ button{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
-    padding-block: 5rem;
     height: 100%;
 }
 #hexagon_image, .hex_text_container{
@@ -380,12 +391,12 @@ button{
 }
 .profile_window{
     width: 100%;
-    height: 20rem;
-    background-image: url(../img/portada.jpg);
-    background-size: cover;
+    aspect-ratio: 1;
+    background-image: url(../img/new_hex.svg);
+    background-size: contain;
     background-position: 20%;
     background-repeat: no-repeat;
-}
+} 
 @media screen and (min-width: 1921px) {
     :root {
         font-size: 36px; /* Cambia el tamaño de fuente para pantallas más pequeñas */
@@ -429,7 +440,7 @@ button{
         display: none;
     }
     #nav{
-        padding-right: 0;
+        padding-inline: 1rem;
     }
     
 }
@@ -437,9 +448,6 @@ button{
 @media screen and (max-width: 400px){
     :root {
         font-size: 12px; /* Cambia el tamaño de fuente para pantallas más pequeñas */
-    }
-    #nav{
-        padding-left: 1rem;
     }
 }
 @keyframes entrance {
