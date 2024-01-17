@@ -43,7 +43,7 @@ h4{
     font-family: 'Fira Sans';
     font-weight: 200;
     font-size: 1.5rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.1rem;
 }
 .double_title :first-child{
     transform: translate(-1rem);
@@ -62,21 +62,6 @@ i{
 button{
     cursor: pointer;
     background-color: #ffffff00;
-}
-/* section{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 100vw;
-    padding-block: 3rem;
-} */
-article{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
 }
 .hex_app_button{
     align-self: center;
@@ -340,9 +325,9 @@ article{
     animation: entrance 1s ease;
 }
 .divider{
+    width: 60%;
     border-radius: 1rem;
-    border-top: 0.4rem solid orange;
-    margin-inline: 20%;
+    border-top: 0.5rem solid orange;
 }
 #introduce_myself .image_container::before{
     position: absolute;
