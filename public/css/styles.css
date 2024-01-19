@@ -3,22 +3,31 @@
     font-size: 16px;
     --gris_fondo2: rgb(46, 46, 46);
     --gris_fondo: #1f1f1f;
-    --white:whitesmoke; 
+    
     --azul: #4576ff;
     --azul_fade: #2a4693;
     --celeste: #a1ffeb;
     --neon: #2897ff;
+
+    --main: #2760FF;
+    --main_alt_dark: #00258C;
+    --main_alt_soft: #7095FA;
+    --white: #F5F5F5; 
+    --gray: #838383;
+    --gray_dark: #353535;
+    --black: #1F1F1F;
     color: var(--white);
 }
 html {
     scroll-behavior: smooth;
 }
 body{
-    background-color: var(--gris_fondo2);
+    background-color: var(--black);
     color: var(--white);
     font-family: 'Raleway';
 }
-p{
+p{  
+    text-align: justify;
     font-family: 'Raleway';
     font-weight: 400;
     font-size: 1.2rem;
@@ -95,19 +104,24 @@ button{
 }
 
 .app_color_button{
+    isolation: isolate;
+
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     color: whitesmoke;
-    font-size: 1.2rem;
     padding: 0.25rem;
     padding-inline: 1.5rem;
     border-radius: 0.6rem;
     transition: all 0.25s ease;
     overflow: hidden;
+
+    font-family: 'Fira Sans';
+    font-size: 2rem;
+    font-weight: 400; /* regular */
 
 }
 .app_color_button::after{
@@ -116,9 +130,11 @@ button{
     width: 70%;
     aspect-ratio: 1;
     background-color: var(--azul);
-    rotate: 45deg;
+
     z-index: -1;
     transition: all 0.25s ease;
+    /* forma diamante */
+    transform: scale(1,1.3) rotate(45deg)
 }
 .app_color_button:hover::after{
     background-color: var(--azul_fade);
@@ -246,22 +262,6 @@ button{
     color: var(--azul);
 }
 
-/* #introduce_myself{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    padding-right: 0;
-    gap: 5rem;
-}
-#introduce_myself article{
-    position: relative;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-} */
 #competencias{
     font-family: 'Varela Round';
     display: flex;
@@ -322,6 +322,9 @@ button{
     background-position: center;
     background-repeat: no-repeat;
     animation: entrance 1s ease;
+}
+section{
+    padding-block: 5rem;
 }
 .divider{
     width: 60%;
@@ -417,3 +420,34 @@ button{
         rotate: 360deg;
     }
 }
+
+/* generic */
+
+
+.main_bg {
+    background-color: var(--main);
+  }
+  
+  .bg_alt_dark {
+    background-color: var(--main_alt_dark);
+  }
+  
+  .bg_alt_soft {
+    background-color: var(--main_alt_soft);
+  }
+  
+  .bg_white {
+    background-color: var(--white);
+  }
+  
+  .bg_gray {
+    background-color: var(--gray);
+  }
+  
+  .bg_gray_dark {
+    background-color: var(--gray_dark);
+  }
+  
+  .bg_black {
+    background-color: var(--black);
+  }
