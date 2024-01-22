@@ -1,0 +1,20 @@
+.carta_index{
+    padding: 0;
+    overflow: hidden;
+    border-radius: 2.5rem;
+    border: 0.1rem solid var(--white);
+    transform: scale(1.02);
+
+}
+.carta_index_img_container{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 85% 75%, 15% 75%, 0 100%);
+}
+
+.carta_index img{
+
+}
+
+.carta_index_info{
+
+    transform: translate(0, -20%);
+}
