@@ -6,15 +6,22 @@
     transform: scale(1.02);
 
 }
-.carta_index_img_container{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 85% 75%, 15% 75%, 0 100%);
+.carta_index_title{
+    clip-path: polygon(0 100%, 0 60%, 20% 15%, 80% 15%, 100% 60%, 100% 100%);
+    
 }
 
-.carta_index img{
+.carta_index_info {
+    text-align: center;
+    clip-path: polygon(0 100%, 0 25%, 20% 5%, 80% 5%, 100% 25%, 100% 100%);
+    transform: translate(0, -25%);
+    outline: 2px solid black;
 
-}
-
-.carta_index_info{
-
-    transform: translate(0, -20%);
+    p {
+        text-align: center;
+    }
+    *{
+        /* necesario para corregir los bordes raros que quedan */
+        scale: 1.01;
+    }
 }

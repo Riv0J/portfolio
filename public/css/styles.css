@@ -19,10 +19,19 @@
     font-size: 16px;
     color: var(--white);
 }
+path{
+    fill: var(--white);
+}
 html {
     scroll-behavior: smooth;
 }
+main{
+    overflow-x: hidden;
+}
 /* font-sizes */
+.bold{
+    font-weight: 700;
+}
 .semibold{
     font-weight: 600;
 }
@@ -38,7 +47,9 @@ html {
 .extralight{
     font-weight: 200;
 }
-
+footer{
+    border-top: 0.1rem solid var(--gray);
+}
 body{
     background-color: var(--black);
     color: var(--white);
@@ -341,11 +352,27 @@ button{
     background-repeat: no-repeat;
     animation: entrance 1s ease;
 }
+#contacto_container{
+    i{
+        font-size: 3rem;
+    }
+}
+.flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .divider{
     width: 60%;
     border-radius: 1rem;
     border-top: 0.5rem solid orange;
     transform: translate(0, 50%);
+}
+.divider_blue{
+    width: 90%;
+    border-radius: 1rem;
+    border-top: 0.5rem solid var(--main);
+    transform: translate(0, -50%);
 }
 #introduce_myself .image_container::before{
     position: absolute;
@@ -452,31 +479,31 @@ button{
     }
 }
 
-/* generic */
-.main_bg {
+/* generic bgs*/
+.bg_main {
     background-color: var(--main);
-  }
-  
-  .bg_alt_dark {
+}
+
+.bg_alt_dark {
     background-color: var(--main_alt_dark);
-  }
-  
-  .bg_alt_soft {
+}
+
+.bg_alt_soft {
     background-color: var(--main_alt_soft);
-  }
-  
-  .bg_white {
+}
+
+.bg_white {
     background-color: var(--white);
-  }
-  
-  .bg_gray {
+}
+
+.bg_gray {
     background-color: var(--gray);
-  }
-  
-  .bg_gray_dark {
+}
+
+.bg_gray_dark {
     background-color: var(--gray_dark);
-  }
-  
-  .bg_black {
+}
+
+.bg_black {
     background-color: var(--black);
-  }
+}

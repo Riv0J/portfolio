@@ -194,3 +194,12 @@ function applyTextRevealEffect() {
         escribirCodigo(text_reveal,elemento);
     });
 }
+
+function goToTop(){
+    
+    // Scroll suave hacia el inicio de la página
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
