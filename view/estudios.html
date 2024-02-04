@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rivo | Portfolio</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fira Sans, Montserrat, Varela Round -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@300&family=Outfit&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,800;0,900;1,500;1,600;1,700&family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!-- Remixicon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Jquery JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="../public/css/normalize.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../public/css/styles.css">
+    <link rel="stylesheet" href="../public/css/index.css">
+</head>
+<body>
+    <header class="fixed-top">
+        <div id="responsive_header" class="d-flex flex-row justify-content-between px-3 py-2">
+            <aside>
+                <a href="index.html" id="nombre" class="d-flex flex-row align-items-center justify-content-start app_hover">
+                    <div id="logo" class="halo d-flex align-items-center justify-content-center">
+                        <svg class="app_svg app_hover" viewBox="0 0 485.688 485.688">
+                            <g>
+                                <g>
+                                    <path d="M364.269,453.155H121.416L0,242.844L121.416,32.533h242.853l121.419,210.312L364.269,453.155z M131.905,434.997h221.878
+                                        l110.939-192.152L353.783,50.691H131.905L20.966,242.844L131.905,434.997z"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <div class="image_container"></div>
+                    </div>
+                    Rivo José · Portfolio
+                </a>
+            </aside>
+            <button id="responsive_menu_button" class="flex_center app_hover">
+                <i data_icon_name="burger_menu"></i>
+            </button>
+        </div>
+
+        <nav id="responsive_nav" class="d-flex flex-column">
+            <a href="#"><h3 class="text-left regular px-4 py-2">Estudios</h3></a>
+            <a href="#"><h3 class="text-left regular px-4 py-2">Competencias</h3></a>
+            <a href="#"><h3 class="text-left regular px-4 py-2">Sobre mí</h3></a>
+        </nav>
+    </header>
+    <main>
+        
+    </main>
+
+    <footer class="container-fluid flex_center flex-column">
+        <div class="divider_blue"></div>
+
+        <div class="p-5 flex_center gap-4">
+            <h2 class="bold">Rivo Molina</h2> 
+            <!-- <button class="hex_app_button" link_scroll_to="section_2">
+                <i data_icon_name="arrow_up"></i>
+            </button> -->
+            <button class="hex_app_button" onclick="goToTop()">
+                <i data_icon_name="arrow_up"></i>
+            </button>
+            
+        </div>
+        
+        <div class="flex-column flex_center gap-3 pb-5">
+            <a href="#"><h3 class="extralight">Competencias</h3></a>
+            <a href="#"><h3 class="extralight">Estudios</h3></a>
+            <a href="#"><h3 class="extralight">Proyectos</h3></a>
+            <a href="#"><h3 class="extralight">Sobre mí</h3></a>
+        </div>
+        
+        <h2 class="bold pb-3">Contacto</h2>
+        <div id="contacto_container" class="light flex-row flex_center gap-5 pb-5">
+            <a href="mailto:rivojosemolina@hotmail.com" target="_blank" class="container_hover">
+                <i class="ri-mail-line"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rivo-molina-78849b1b9/" target="_blank" class="container_hover">
+                <i class="ri-linkedin-box-line"></i>
+            </a>
+            <a href="https://github.com/Riv0J" target="_blank" class="container_hover">
+                <i class="ri-github-fill"></i>
+            </a>
+        </div>        
+    </footer>
+</body>
+<script src="../public/js/Icons.js"></script>
+<script src="../public/js/portfolio.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        initPortfolio();
+    });
+</script>
+</html>

@@ -1,16 +1,26 @@
+.profile_window{
+    background-image: url(../img/index/profile.png);
+    background-size: cover;
+    background-position: 0%;
+    background-repeat: no-repeat;
+    scale: 0.95;
+}
+.hexagon_clip{
+    width: 100%;
+    aspect-ratio: 1.15;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
 .carta_index{
     padding: 0;
     overflow: hidden;
     border-radius: 2.5rem;
     border: 0.1rem solid var(--white);
     transform: scale(1.02);
-
 }
 .carta_index_title{
     clip-path: polygon(0 100%, 0 60%, 20% 15%, 80% 15%, 100% 60%, 100% 100%);
     
 }
-
 .carta_index_info {
     text-align: center;
     clip-path: polygon(0 100%, 0 25%, 20% 5%, 80% 5%, 100% 25%, 100% 100%);

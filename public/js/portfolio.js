@@ -1,16 +1,49 @@
-const RESPONSIVE_WIDTH = 768;
-let header_element = document.getElementById('nav');
+let header_element = document.getElementsByTagName('header')[0];
+
 let personal_element = document.getElementById('personal');
 let desktop_menu = document.getElementById('desktop_menu');
 
 //responsive variables
+const RESPONSIVE_WIDTH = 768;
 let responsive_menu_button = document.getElementById("responsive_menu_button");
+const responsiveNav = $("#responsive_nav");
 let desktop_menu_items_array = null;
 
 let responsive_mode = false;
 
+async function toggleResponsiveNav() {
+    if(responsiveNav.css("display") === "none"){
+        responsiveNav.css("display","flex");
+        
+    } else {
+        responsiveNav.css("display","none");
+    }
+
+    await showElements(responsiveNav);
+    
+}
+async function showElements(element){
+    const hijos = element.children();
+
+    hijos.each(function () {
+        const hijo = $(this);
+
+        let new_value = "block";
+        if(hijo.css("display") == "block"){
+            new_value = "none";
+        }
+        hijo.css("display",new_value);
+        sleep(500);
+    });
+}
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 function initPortfolio(){
-    SetNavOffSet();
+    responsive_menu_button.addEventListener("click", function(){
+        toggleResponsiveNav();
+    })
+    SetHeaderOffSet();
 
     // responsive_mode = isWindowSizeResponsive();
     // header_element = document.getElementById('nav'); 
@@ -41,11 +74,15 @@ function initPortfolio(){
     populateIconClasses();
     applyTextRevealEffect();
 }
-function SetNavOffSet(){
-    const nav = document.getElementById('nav');
-    const alturaNav = nav.offsetHeight;
+function SetHeaderOffSet(){
+    let header_element = document.getElementsByTagName('header')[0];
+    const alturaHeader = header_element.offsetHeight;
 
-    document.querySelector('section').style.marginTop = `${alturaNav}px`;
+    //obtener la primera section y aplicarle el offset
+    if(document.querySelector('section')){
+        document.querySelector('section').style.marginTop = `${alturaHeader}px`;
+    }
+    
 }
 function toggleDisplay(elements_array, new_display){
     let counter = 1;

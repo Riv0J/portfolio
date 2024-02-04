@@ -19,7 +19,7 @@
     font-size: 16px;
     color: var(--white);
 }
-path{
+main path{
     fill: var(--white);
 }
 html {
@@ -54,6 +54,11 @@ body{
     background-color: var(--black);
     color: var(--white);
     font-family: 'Raleway';
+}
+header{
+    background-color: var(--gris_fondo);
+    transition: all 1s;
+    color: whitesmoke;
 }
 p{  
     text-align: justify;
@@ -103,6 +108,17 @@ button{
     cursor: pointer;
     background-color: #ffffff00;
 }
+#responsive_header{
+    border-bottom: 0.1rem solid var(--gray);
+}
+#responsive_nav{
+    display: none;
+    transition: all 0.2s;
+    >*{
+        display: none;
+        border-bottom: 0.1rem solid var(--gray);
+    }
+}
 .hex_app_button{
     align-self: center;
     position: relative;
@@ -134,7 +150,12 @@ button{
 .hex_app_button:hover{
     color: black;
 }
-
+.container_hover{
+    transition: all 0.5s;
+}
+.container_hover:hover{
+    scale: 1.1;
+}
 .app_color_button{
     isolation: isolate;
     position: relative;
@@ -181,11 +202,6 @@ button{
     align-items: center;
     flex-direction: row;
     gap: 0.5rem;
-}
-#nav{
-    background-color: var(--gris_fondo);
-    transition: all 1s;
-    color: whitesmoke;
 }
 #nombre{
     font-family: 'Fire Sans';
@@ -250,11 +266,6 @@ button{
     aspect-ratio: 1;
     transition: all 0.3s;
 }
-.centered_elements{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .deplegable_titulo{
     gap: 0.5rem;
     padding: 0.5rem;
@@ -278,7 +289,6 @@ button{
 .desplegable_option{
     padding: 0.75rem;
     transition: all 0.2s;
-    
 }
 .siglas{
     letter-spacing: 0.2rem;
@@ -287,7 +297,7 @@ button{
     color: whitesmoke;
 }
 .app_hover:hover{
-    transition: all 0.4s;
+    transition: all 0.1s;
     color: var(--azul);
 }
 
@@ -332,26 +342,6 @@ button{
     align-self: center;
     margin-block: 1rem;
 }
-#hexagon_image{
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    aspect-ratio: 1;
-    fill: var(--neon);
-    scale: 1.5;
-    animation: entrance 1s ease, rotation 175s linear infinite;
-}
-#hexagon_image::before{
-    content: '';
-    position: absolute;
-    inset: 20%;
-    background-image: url(../img/perfil3.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: entrance 1s ease;
-}
 #contacto_container{
     i{
         font-size: 3rem;
@@ -386,14 +376,6 @@ button{
     border-radius: 50%;
     aspect-ratio: 1;
     outline: 0.1rem black solid;
-}
-.profile_window{
-    width: 100%;
-    aspect-ratio: 1;
-    background-image: url(../img/new_hex.svg);
-    background-size: contain;
-    background-position: 20%;
-    background-repeat: no-repeat;
 }
 
 /* media queries */ 
