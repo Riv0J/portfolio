@@ -1,5 +1,5 @@
 .profile_window{
-    background-image: url(../img/index/profile.png);
+    background-image: url(../img/index/profile_far.png);
     background-size: cover;
     background-position: 0%;
     background-repeat: no-repeat;
@@ -25,13 +25,13 @@
     text-align: center;
     clip-path: polygon(0 100%, 0 25%, 20% 5%, 80% 5%, 100% 25%, 100% 100%);
     transform: translate(0, -25%);
-    outline: 2px solid black;
+    border-bottom: 0.1rem solid var(--black);
 
     p {
         text-align: center;
     }
     *{
         /* necesario para corregir los bordes raros que quedan */
-        scale: 1.01;
+        scale: 1.05;
     }
 }

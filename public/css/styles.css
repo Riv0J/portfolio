@@ -1,10 +1,5 @@
 /* variables colores */
 :root {
-    --gris_fondo2: rgb(46, 46, 46);
-    --gris_fondo: #1f1f1f;
-    
-    --azul: #4576ff;
-    --azul_fade: #2a4693;
     --celeste: #a1ffeb;
     --neon: #2897ff;
 
@@ -28,7 +23,7 @@ html {
 main{
     overflow-x: hidden;
 }
-/* font-sizes */
+/* font-sizes start */
 .bold{
     font-weight: 700;
 }
@@ -47,6 +42,7 @@ main{
 .extralight{
     font-weight: 200;
 }
+/* font-sizes end */
 footer{
     border-top: 0.1rem solid var(--gray);
 }
@@ -56,7 +52,7 @@ body{
     font-family: 'Raleway';
 }
 header{
-    background-color: var(--gris_fondo);
+    background-color: var(--black);
     transition: all 1s;
     color: whitesmoke;
 }
@@ -116,86 +112,9 @@ button{
     transition: all 0.2s;
     >*{
         display: none;
-        border-bottom: 0.1rem solid var(--gray);
+        border-bottom: 0.05rem solid var(--gray);
     }
 }
-.hex_app_button{
-    align-self: center;
-    position: relative;
-    color: whitesmoke;
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    padding-inline: 1.5rem;
-    transition: all 0.25s;
-    font-size: 1rem;
-    width: 1.5rem;
-    aspect-ratio: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.hex_app_button::after{
-    pointer-events: none;
-    content: '⬣';
-    position: absolute;
-    color: var(--azul);
-    transition: all 0.3s ease;
-    font-size: 4rem;
-    z-index: -1;
-}
-.hex_app_button:hover::after{
-    color: whitesmoke;
-    scale: 1.25;
-}
-.hex_app_button:hover{
-    color: black;
-}
-.container_hover{
-    transition: all 0.5s;
-}
-.container_hover:hover{
-    scale: 1.1;
-}
-.app_color_button{
-    isolation: isolate;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    color: whitesmoke;
-    padding: 0.5rem;
-    padding-inline: 1.5rem;
-    border-radius: 0.6rem;
-    transition: all 0.25s ease;
-    overflow: hidden;
-
-    font-family: 'Fira Sans';
-    font-size: 1.5rem;
-    font-weight: 400; /* regular */
-
-}
-.app_color_button::after{
-    content: '';
-    position: absolute;
-    width: 70%;
-    aspect-ratio: 1;
-    background-color: var(--azul);
-
-    z-index: -1;
-    transition: all 0.25s ease;
-    /* forma diamante */
-    transform: scale(1,1.3) rotate(45deg);
-}
-.app_color_button:hover{
-    scale: 1.1;
-}
-.app_color_button:hover::after{
-    background-color: var(--main_alt_dark);
-    border: 0.2rem solid white;
-}
-
 .icon_title{
     display: flex;
     justify-content: center;
@@ -280,7 +199,7 @@ button{
     flex-direction: column;
     width: 100%;
     top: 100%;
-    background-color: var(--gris_fondo);
+    background-color: var(--black);
     border-radius: 0.5rem;
     display: none;
     border-bottom: 0.1rem black solid;
@@ -298,7 +217,7 @@ button{
 }
 .app_hover:hover{
     transition: all 0.1s;
-    color: var(--azul);
+    color: var(--main);
 }
 
 #competencias{
@@ -318,17 +237,7 @@ button{
     background-image: linear-gradient(to right bottom, #4576ff, #4f63c579, #4b508f75, #403e5c7d, #2e2e2e);
     z-index: -1;
 }
-#introduce_myself .image_container{
-    height: 100%;
-}
-#introduce_myself::after {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-position: left;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+
 .text_content_box{
     display: flex;
     flex-direction: column;
@@ -342,28 +251,7 @@ button{
     align-self: center;
     margin-block: 1rem;
 }
-#contacto_container{
-    i{
-        font-size: 3rem;
-    }
-}
-.flex_center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.divider{
-    width: 60%;
-    border-radius: 1rem;
-    border-top: 0.5rem solid orange;
-    transform: translate(0, 50%);
-}
-.divider_blue{
-    width: 90%;
-    border-radius: 1rem;
-    border-top: 0.5rem solid var(--main);
-    transform: translate(0, -50%);
-}
+
 #introduce_myself .image_container::before{
     position: absolute;
     content: '';
@@ -376,6 +264,126 @@ button{
     border-radius: 50%;
     aspect-ratio: 1;
     outline: 0.1rem black solid;
+}
+
+/* app_color_button */
+.app_color_button{
+    isolation: isolate;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: whitesmoke;
+    padding: 0.5rem;
+    padding-inline: 1.5rem;
+    border-radius: 0.6rem;
+    transition: all 0.25s ease;
+    overflow: hidden;
+
+    font-family: 'Fira Sans';
+    font-size: 1.5rem;
+    font-weight: 400; /* regular */
+}
+.app_color_button::after{
+    content: '';
+    position: absolute;
+    width: 70%;
+    aspect-ratio: 1;
+    background-color: var(--main);
+
+    z-index: -1;
+    transition: all 0.25s ease;
+    /* forma diamante */
+    transform: scale(1,1.3) rotate(45deg);
+}
+.app_color_button:hover{
+    scale: 1.1;
+}
+.app_color_button:hover::after{
+    background-color: var(--main_alt_dark);
+    border: 0.2rem solid white;
+}
+/* app_color_button end */
+
+/* hex_app_button start*/
+.hex_app_button{
+    align-self: center;
+    position: relative;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    padding-inline: 1.5rem;
+    transition: all 0.25s;
+    font-size: 1rem;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hex_app_button::after{
+    pointer-events: none;
+    content: '⬣';
+    position: absolute;
+    color: var(--main);
+    transition: all 0.3s ease;
+    font-size: 4rem;
+    z-index: -1;
+}
+.hex_app_button:hover::after{
+    color: whitesmoke;
+    scale: 1.25;
+}
+.hex_app_button:hover{
+    color: black;
+}
+/* hex_app_button end*/
+
+/* text_hover */
+.text_hover{
+    transition: all 0.5s;
+}
+.text_hover:hover{
+    color: var(--main);
+    transition: all 0.5s;
+}
+
+/* container_hover */
+.container_hover{
+    transition: all 0.5s;
+}
+.container_hover:hover{
+    scale: 1.1;
+}
+
+/* footer */
+#contacto_container{
+    i{
+        font-size: 3rem;
+    }
+}
+
+/* generic classes */
+.flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* dividers */ 
+.divider{
+    width: 60%;
+    border-radius: 1rem;
+    border-top: 0.5rem solid orange;
+    transform: translate(0, 50%);
+}
+.divider_blue{
+    width: 90%;
+    border-radius: 1rem;
+    border-top: 0.5rem solid var(--main);
+    transform: translate(0, -50%);
 }
 
 /* media queries */ 
