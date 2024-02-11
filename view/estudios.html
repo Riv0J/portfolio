@@ -59,49 +59,118 @@
         </div>
 
         <nav id="responsive_nav" class="d-flex flex-column">
-            <a href="#"><h3 class="text-left regular px-4 py-2">Estudios</h3></a>
-            <a href="#"><h3 class="text-left regular px-4 py-2">Competencias</h3></a>
+            <a href="competencias.html"><h3 class="text-left regular px-4 py-2">Competencias</h3></a>
             <a href="#"><h3 class="text-left regular px-4 py-2">Sobre mí</h3></a>
         </nav>
     </header>
+
+
     <main>
+        <section class="row justify-content-center bg_black">
+            <h2 class="text-center pt-5">Estudios</h2>
+            <p class="p-5">
+                Aquí tienes mi experiencia de competencias técnicas y reflexiones luego de cursar 1º y 2º de DAW en el Centro San Luis de Bilbao. 
+                Cada curso tendrá apartados de conocimientos obtenidos, reto final y reflexiones personales.
+            </p>
+            <div class="divider"></div>
+        </section>
+
+        <section class="row justify-content-center bg_gray_dark">
+            <h2 class="text-center py-5">Desarrollo de Aplicaciones Web</h2>
+            <h4 class="text-center px-5">Formación Profesional Superior</h4>
+            <div class="px-5">
+                <p class="py-3">
+                    El trabajo final de primero de DAW consistió en el desarrollo de un sitio web de escape rooms online. 
+                </p>
+                <p class="py-3">
+                    Para entregar una aplicación final, debíamos cumplir con los requerimientos de un cliente:
+                </p>
+                <ul class="list py-3">
+                    <li>Análisis funcional</li>
+                    <li>Mock-up de la web</li>
+                    <li>Despliegue de base de datos SQL</li>
+                    <li>Programación del modelo en Java</li>
+                    <li>Maquetación responsive en CSS y HTML</li>
+                    <li>Servidor en máquina virtual</li>
+                    <li>Web multilingüe</li>
+                </ul>
+                <a href="../public/docs/Reto_DAW1.pdf" class="container_hover" target="_blank">
+                    <p class="text-center py-3">Requerimientos de la aplicación</p>
+                    <div class="pdf_preview">
+                        <img src="../public/img/estudios/Preview_DAW1.png" alt="Preview DAW1">
+                    </div>
+                    
+                    <p class="text-center py-2">Pincha para ver el documento</p>
+                </a>
+                <p class="py-3">
+                    Tuvimos una entrevista con un cliente, el cual nos explicó sus necesidades. Algunas eran, por ejemplo, de que la aplicación debería ser multilingue y que se debían poder hacer reservas para salas físicas.
+                </p>
+                <p class="py-3">
+                    A raiz de todo esto, para empezar el proyecto creamos un enunciado el cual debíamos cumplir hasta el final (el análisis de la aplicación, con su diagrama de clases y casos de uso).
+                </p>
+            </div>
+            <div class="row flex_center px-5 text-nowrap py-5">
+                <a href="https://github.com/Riv0J/java_web_BilboSKP" target="_blank" class="app_color_button">Ver el proyecto en GitHub</a>
+            </div>
+            <div class="divider"></div>
+        </section>
+        <section class="row justify-content-center bg_black">
+            <h2 class="text-center py-5">Reflexiones Técnicas</h2>
+            <div class="divider"></div>
+        </section>
         
+        <section class="row justify-content-center bg_gray_dark px-5">
+            <h2 class="text-center py-5">Análisis</h2>
+            <p class="py-3">
+                Realizar el análisis funcional de la aplicación, que incluye:
+            </p>
+            <ul class="list py-3">
+                <li>Enunciado formal</li>
+                <li>Casos de uso(con sus diagramas)</li>
+                <li>Diagrama de clases</li>
+            </ul>
+
+            <a href="../public/docs/Analisis_DAW1.pdf" class="container_hover pb-5" target="_blank">
+                <div class="pdf_preview">
+                    <img src="../public/img/estudios/Analisis_DAW1.png" alt="Preview Análisis DAW1">
+                </div>
+                
+                <p class="text-center py-2">Pincha para ver el documento</p>
+            </a>
+
+            <div class="divider"></div>
+        </section>
+
+        <section class="row justify-content-center bg_gray_dark">
+            <h2 class="text-center py-5">Front-end</h2>
+            <p class="py-3 px-5">
+                Introducción a HTML y CSS, maquetación de mock-ups, wireframes y lenguaje de marcas.
+            </p>
+    
+            <img src="../public/img/estudios/wireframe_1.png" alt="Wireframe 1" class="overflow_img">
+            <p class="text-center py-3 px-5">Wireframe temprano de la aplicación</p>
+            <img src="../public/img/estudios/BILBOSKP_SC2.png" alt="Wireframe 1" class="pt-4 overflow_img">
+            <p class="text-center py-3 px-5 pb-5">Estilo final de la misma sección</p>
+            <div class="divider"></div>
+        </section>
+
+        <section class="row justify-content-center bg_black px-5">
+            <h2 class="text-center py-5">Back-end</h2>
+            <p class="py-3 px-2">
+                Introducción a la programación orientada a objetos con Java. Desarrollo de la web del lado del servidor, manipulación de base de datos SQL.
+            </p>
+            <p class="py-3 px-2">
+                Échale un ojo al resultado final:
+            </p>
+        </section>
+        <video width="100%" height="auto" controls class="px-2">
+            <source src="../public/videos/BilboSKP- Preview.mp4" type="video/mp4">
+            <!-- Añade más etiquetas source para otros formatos de video -->
+            Tu navegador no admite el elemento de video.
+        </video>
+
     </main>
 
-    <footer class="container-fluid flex_center flex-column">
-        <div class="divider_blue"></div>
-
-        <div class="p-5 flex_center gap-4">
-            <h2 class="bold">Rivo Molina</h2> 
-            <!-- <button class="hex_app_button" link_scroll_to="section_2">
-                <i data_icon_name="arrow_up"></i>
-            </button> -->
-            <button class="hex_app_button" onclick="goToTop()">
-                <i data_icon_name="arrow_up"></i>
-            </button>
-            
-        </div>
-        
-        <div class="flex-column flex_center gap-3 pb-5">
-            <a href="#"><h3 class="extralight">Competencias</h3></a>
-            <a href="#"><h3 class="extralight">Estudios</h3></a>
-            <a href="#"><h3 class="extralight">Proyectos</h3></a>
-            <a href="#"><h3 class="extralight">Sobre mí</h3></a>
-        </div>
-        
-        <h2 class="bold pb-3">Contacto</h2>
-        <div id="contacto_container" class="light flex-row flex_center gap-5 pb-5">
-            <a href="mailto:rivojosemolina@hotmail.com" target="_blank" class="container_hover">
-                <i class="ri-mail-line"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/rivo-molina-78849b1b9/" target="_blank" class="container_hover">
-                <i class="ri-linkedin-box-line"></i>
-            </a>
-            <a href="https://github.com/Riv0J" target="_blank" class="container_hover">
-                <i class="ri-github-fill"></i>
-            </a>
-        </div>        
-    </footer>
 </body>
 <script src="../public/js/Icons.js"></script>
 <script src="../public/js/portfolio.js"></script>
