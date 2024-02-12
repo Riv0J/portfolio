@@ -32,7 +32,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../public/css/styles.css">
-    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/css/competencias.css">
 </head>
 <body>
     <header class="fixed-top">
@@ -65,16 +65,108 @@
     </header>
 
     <main>
-        <section class="row justify-content-center bg_gray">
+        <section class="row justify-content-center bg_gray_dark">
             <h2 class="text-center p-5">Competencias</h2>
             <div class="divider"></div>
         </section>
 
-    </main>
+        <section class="row justify-content-center bg_black">
+            <p class="col-10 my-4 text-center">
+                Selecciona una competencia
+            </p>
+            <div class="col-10 row mb-5">
+                <article class="light_border">
+                    <button class="accordion medium">
+                        Lenguaje de Marca<i data_icon_name="arrow_up"></i>
+                    </button>
+                    <div class="row justify-content-center accordion_content">
+                        <img src="../public/img/csl_1.jpeg" alt="" class="py-3">
+                        <p class="col-10 py-3">
+                            Content
+                        </p>
+                    </div>
+                </article>
 
+                <article class="light_border">
+                    <button class="accordion medium">
+                        Entorno Servidor<i data_icon_name="arrow_up"></i>
+                    </button>
+                    <div class="row justify-content-center accordion_content">
+                        <img src="../public/img/csl_1.jpeg" alt="" class="py-3">
+                        <p class="col-11 py-3">
+                            Desarrollo de aplicaciones web en Java y PHP. Programación Orientada a objetos, siguiendo la estructura de controlador-modelo-vista comunicándose con la base de datos.
+                        </p>
+                        <p class="col-11 py-3">
+                            En PHP, utilizado principalmente el framework de Laravel con Eloquent para obtener los datos de la DB.
+                            En Java, usando las clases apropiadas para hacer las aplicaciones(Servlets y JSPs) y confeccionar las consultas SQL a mano y lanzarlas contra la base de datos.
+                        </p>
+                        <p class="col-11 py-3">
+                            Algunos de los entornos que he utilizado son Eclipse(Java Web) y VS Code(PHP).
+                        </p>
+                    </div>
+                </article>
+
+                <article class="light_border">
+                    <button class="accordion medium">
+                        Bases de Datos<i data_icon_name="arrow_up"></i>
+                    </button>
+                    <div class="row justify-content-center accordion_content">
+                        <img src="../public/img/csl_1.jpeg" alt="" class="py-3">
+                        <p class="col-10 py-3">
+                            Realizar esquemas complejos de datos. Manipular bases de datos mediante consultas SQL, realizando inserts, selects, updates, y deletes. Utilizar joins y claves externas para hacer esquemas de datos estructurados(modelo relacional).
+
+                            Usar algunos softwares para crear servidores de prueba como UniserverZ, XAMPP y HeidiSQL.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="light_border">
+                    <button class="accordion medium">
+                        Interfaces Web<i data_icon_name="arrow_up"></i>
+                    </button>
+                    <div class="row justify-content-center accordion_content">
+                        <img src="../public/img/csl_1.jpeg" alt="" class="py-3">
+                        <p class="col-10 py-3">
+                            Content
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+
+            <div class="divider"></div>
+        </section>
+        
+        <section class="row justify-content-center bg_gray_dark">
+            <h2 class="text-center p-5">Lenguajes</h2>
+            <div class="divider"></div>
+        </section>
+    </main>
+    <style>
+
+    </style>
 </body>
 <script>
-    const competencias={
+    const acc = document.getElementsByClassName("accordion");
+    let i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+
+            
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
+
+            console.log(panel);
+
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+    const lenguajes={
         'HTML5' : {
             'img': '',
             'level': 4,
@@ -83,22 +175,22 @@
         'CSS3' : {
             'img': '',
             'level': 4,
-            'text': 'Manejo la estructura de marcado HTML. Desde la creación de un documento básico con header, seccione, links e imágenes, hasta menús, formularios y demás multimedia.'
+            'text': 'CSS3'
         },
         'JS' : {
             'img': '',
             'level': 5,
-            'text': 'Manejo la estructura de marcado HTML. Desde la creación de un documento básico con header, seccione, links e imágenes, hasta menús, formularios y demás multimedia.'
+            'text': 'JS'
         },
         'Java' : {
             'img': '',
             'level': 4,
-            'text': 'Manejo la estructura de marcado HTML. Desde la creación de un documento básico con header, seccione, links e imágenes, hasta menús, formularios y demás multimedia.'
+            'text': 'JAVA'
         },
         'PHP' : {
             'img': '',
             'level': 5,
-            'text': 'Manejo la estructura de marcado HTML. Desde la creación de un documento básico con header, seccione, links e imágenes, hasta menús, formularios y demás multimedia.'
+            'text': 'PHP'
         },
         'SQL': {
             'img': 'ruta/a/imagen_sql.png',
