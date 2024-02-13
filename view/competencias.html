@@ -172,7 +172,13 @@
 
             <div class="divider"></div>
         </section>
+        <section class="row justify-content-center bg_black" >
+            <div class="row col-11 justify-content-center pb-5" id="lenguajes_content">
+    
+            </div>  
 
+            <div class="divider"></div>
+        </section>
     </main>
 </body>
 <script>
@@ -231,6 +237,7 @@
 
     //crear dinamicamente el menu de lenguajes
     const lenguajes_container = document.getElementById('lenguajes_container');
+    const lenguajes_content = document.getElementById('lenguajes_content');
 
     for (var key in lenguajes) {
         const lenguaje = lenguajes[key];
