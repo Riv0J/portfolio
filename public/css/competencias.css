@@ -25,4 +25,14 @@ button.accordion {
     border: 0.1rem solid var(--gray);
     
 }
+#lenguajes_container{
+    span{
+        font-family: 'Fira Sans';
+        font-size: 1.2rem;
+        letter-spacing: 1.25;
+    }
+    .competencia{
+        
+    }
+}
 

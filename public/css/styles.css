@@ -78,9 +78,14 @@ ul{
 .pdf_preview{
     position: relative;
 }
+.pdf_preview img {
+    border-radius: 2rem;
+    border: 0.1rem solid black;
+    box-shadow: 2px 4px 16px var(--gray);
+}
 .pdf_preview::after {
     content: '';
-    background-image: url('../img/icons/placeholder_pdf.png');
+    background-image: url('../img/icons/placeholder_pdf.svg');
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -88,6 +93,8 @@ ul{
     left: 20%;
     width: 60%;
     height: 60%;
+    scale: 1 1.1;
+    
 }
 li{
     list-style: square;
