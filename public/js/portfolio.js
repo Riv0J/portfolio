@@ -223,7 +223,15 @@ function escribirCodigo(texto, elementoHTML) {
     escribirCaracter();
 }
 function applyTextRevealEffect() {
-    const elementos = document.querySelectorAll('.code_reveal_effect');
+    let elementos = document.querySelectorAll('.code_reveal_effect');
+
+    elementos.forEach(elemento => {
+        const text_reveal = elemento.textContent;
+        elemento.textContent = '';
+        escribirCodigo(text_reveal,elemento);
+    });
+
+    elementos = document.querySelectorAll('h2');
 
     elementos.forEach(elemento => {
         const text_reveal = elemento.textContent;

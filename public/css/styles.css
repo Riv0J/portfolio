@@ -21,7 +21,7 @@ html {
     scroll-behavior: smooth;
 }
 main{
-    overflow-x: hidden;
+    overflow: hidden;
 }
 /* font-sizes start */
 .bold{
@@ -70,10 +70,21 @@ ul{
     font-size: 1rem;
     letter-spacing: 0.04rem;
     line-height: 1.2;
-    
-    >*{
-        padding-block: 0.5rem;
-    }
+}
+ul>*{
+    padding-block: 0.5rem;
+}
+.section_selected{
+    position: relative;
+}
+.section_selected::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-left: 0.5rem solid var(--main);
 }
 .pdf_preview{
     position: relative;
@@ -94,7 +105,6 @@ ul{
     width: 60%;
     height: 60%;
     scale: 1 1.1;
-    
 }
 li{
     list-style: square;
@@ -146,10 +156,10 @@ button{
 #responsive_nav{
     display: none;
     transition: all 0.2s;
-    >*{
-        display: none;
-        border-bottom: 0.05rem solid var(--gray);
-    }
+}
+#responsive_nav>*{
+    display: none;
+    border-bottom: 0.05rem solid var(--gray);
 }
 .icon_title{
     display: flex;
@@ -395,10 +405,8 @@ button{
 }
 
 /* footer */
-#contacto_container{
-    i{
-        font-size: 3rem;
-    }
+#contacto_container i{
+    font-size: 3rem;
 }
 
 /* generic classes */
@@ -419,6 +427,12 @@ button{
     width: 90%;
     border-radius: 1rem;
     border-top: 0.5rem solid var(--main);
+    transform: translate(0, -50%);
+}
+.divider_gray{
+    width: 90%;
+    border-radius: 1rem;
+    border-top: 0.5rem solid var(--gray);
     transform: translate(0, -50%);
 }
 
@@ -460,9 +474,6 @@ button{
     }
     #desktop_menu{
         display: flex;
-    }
-    #introduce_myself{
-        flex-direction: column;
     }
 }
 

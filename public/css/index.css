@@ -26,12 +26,10 @@
     clip-path: polygon(0 100%, 0 25%, 20% 5%, 80% 5%, 100% 25%, 100% 100%);
     transform: translate(0, -25%);
     border-bottom: 0.1rem solid var(--black);
-
-    p {
-        text-align: center;
-    }
-    *{
-        /* necesario para corregir los bordes raros que quedan */
-        scale: 1.05;
-    }
+}
+.carta_index_info p{
+    text-align: center;
+}
+.carta_index_info *{
+    scale: 1.05;
 }

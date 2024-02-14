@@ -12,9 +12,10 @@ button.accordion {
     width: 100%;
     padding: 0.75rem;
     padding-inline: 2rem;
-    i{
-        scale: 1.5;
-    }
+
+}
+button.accordion i{
+    scale: 1.5;
 }
 .accordion_content{
     max-height: 0px;
@@ -23,16 +24,43 @@ button.accordion {
 }
 .light_border{
     border: 0.1rem solid var(--gray);
-    
 }
-#lenguajes_container{
-    span{
-        font-family: 'Fira Sans';
-        font-size: 1.2rem;
-        letter-spacing: 1.25;
-    }
-    .competencia{
-        
-    }
+#lenguajes_container span{
+    font-family: 'Fira Sans';
+    font-size: 1.2rem;
+    letter-spacing: 1.3;
+    transition: all 0.25s;
 }
+.lenguaje{
+    position: relative;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.lenguaje::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    border-bottom: 0.25rem solid var(--main);
+    transition: all 0.25s;
+}
+.lenguaje::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+}
+.lenguaje:hover::before{
+    background-color: var(--gray);
+    opacity: 0.2;
+}
+.lenguaje_selected::after{
+    width: 100%;
+}
+.lenguaje:hover::before, .lenguaje_selected::after{
+    border-radius: 0.5rem;
+}
+
 
