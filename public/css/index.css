@@ -6,7 +6,7 @@
     scale: 0.95;
 }
 .hexagon_clip{
-    width: 100%;
+    min-width: 10%;
     aspect-ratio: 1.15;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }

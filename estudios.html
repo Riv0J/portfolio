@@ -25,11 +25,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
     <!-- Normalize CSS -->
-    <link rel="stylesheet" href="../public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/normalize.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../public/css/styles.css">
-    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="public/css/index.css">
 </head>
 <body>
     <header class="fixed-top">
@@ -54,9 +54,10 @@
                 <i data_icon_name="burger_menu"></i>
             </button>
         </div>
+
         <nav id="responsive_nav" class="d-flex flex-column">
-            <a href="estudios.html" class="section_selected"><h3 class="text-left regular px-4 py-2">Estudios</h3></a>
-            <a href="competencias.html"><h3 class="text-left regular px-4 py-2">Competencias</h3></a>
+            <a href="estudios.html"><h3 class="text-left regular px-4 py-2">Estudios</h3></a>
+            <a href="habilidades.html"><h3 class="text-left regular px-4 py-2">Habilidades</h3></a>
             <a href="#"><h3 class="text-left regular px-4 py-2">Sobre mí</h3></a>
         </nav>
     </header>
@@ -64,9 +65,7 @@
     <main>
         <section class="row justify-content-center bg_black">
             <h2 class="text-center pt-5">Estudios</h2>
-            <p class="p-5">
-                Aquí tienes mi experiencia de competencias técnicas y reflexiones luego de cursar DAW en el Centro San Luis de Bilbao. 
-            </p>
+            <p class="p-5">Aquí tienes mi experiencia de competencias técnicas y reflexiones luego de cursar DAW en el Centro San Luis de Bilbao.</p>
             <div class="divider"></div>
         </section>
 
@@ -89,10 +88,10 @@
                     <li>Servidor en máquina virtual</li>
                     <li>Web multilingüe</li>
                 </ul>
-                <a href="../public/docs/Reto_DAW1.pdf" class="container_hover" target="_blank">
+                <a href="public/docs/Reto_DAW1.pdf" class="container_hover" target="_blank">
                     <p class="text-center py-3">Requerimientos de la aplicación</p>
                     <div class="pdf_preview">
-                        <img src="../public/img/estudios/Preview_DAW1.png" alt="Preview DAW1">
+                        <img src="public/img/estudios/Preview_DAW1.png" alt="Preview DAW1">
                     </div>
                     
                     <p class="text-center py-2">Pincha para ver el documento</p>
@@ -125,9 +124,9 @@
                 <li>Diagrama de clases</li>
             </ul>
 
-            <a href="../public/docs/Analisis_DAW1.pdf" class="container_hover pb-5" target="_blank">
+            <a href="public/docs/Analisis_DAW1.pdf" class="container_hover pb-5" target="_blank">
                 <div class="pdf_preview">
-                    <img src="../public/img/estudios/Analisis_DAW1.png" alt="Preview Análisis DAW1">
+                    <img src="public/img/estudios/Analisis_DAW1.png" alt="Preview Análisis DAW1">
                 </div>
                 
                 <p class="text-center py-2">Pincha para ver el documento</p>
@@ -142,9 +141,9 @@
                 Introducción a HTML y CSS, maquetación de mock-ups, wireframes y lenguaje de marcas.
             </p>
     
-            <img src="../public/img/estudios/wireframe_1.png" alt="Wireframe 1" class="overflow_img">
+            <img src="public/img/estudios/wireframe_1.png" alt="Wireframe 1" class="overflow_img">
             <p class="text-center py-3 px-5">Wireframe temprano de la aplicación</p>
-            <img src="../public/img/estudios/BILBOSKP_SC2.png" alt="Wireframe 1" class="pt-4 overflow_img">
+            <img src="public/img/estudios/BILBOSKP_SC2.png" alt="Wireframe 1" class="pt-4 overflow_img">
             <p class="text-center py-3 px-5 pb-5">Estilo final de la misma sección</p>
             <div class="divider"></div>
         </section>
@@ -160,7 +159,7 @@
         </section>
         
         <video width="100%" height="auto" controls class="px-2">
-            <source src="../public/videos/BilboSKP- Preview.mp4" type="video/mp4">
+            <source src="public/videos/BilboSKP- Preview.mp4" type="video/mp4">
             Este navegador no admite el video.
         </video>
 
@@ -168,8 +167,8 @@
             <p class="text-center py-2">Video mostrando el proyecto presentado al final del curso</p>
         </section>
         
-
     </main>
+
     <footer class="container-fluid flex_center flex-column mt-5">
         <div class="divider_blue"></div>
 
@@ -183,7 +182,7 @@
         
         <div class="flex-column flex_center gap-3 pb-5">
             <a href="estudios.html"><h3 class="extralight text_hover">Estudios</h3></a>
-            <a href="competencias.html"><h3 class="extralight text_hover">Competencias</h3></a>
+            <a href="habilidades.html"><h3 class="extralight text_hover">Habilidades</h3></a>
             <a href="#"><h3 class="extralight text_hover">Sobre mí</h3></a>
         </div>
         
@@ -201,8 +200,8 @@
         </div>        
     </footer>
 </body>
-<script src="../public/js/Icons.js"></script>
-<script src="../public/js/portfolio.js"></script>
+<script src="public/js/Icons.js"></script>
+<script src="public/js/portfolio.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         initPortfolio();

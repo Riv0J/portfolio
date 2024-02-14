@@ -25,11 +25,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
     <!-- Normalize CSS -->
-    <link rel="stylesheet" href="../public/css/normalize.css">
+    <link rel="stylesheet" href="public/css/normalize.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../public/css/styles.css">
-    <link rel="stylesheet" href="../public/css/competencias.css">
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="public/css/habilidades.css">
 </head>
 <body>
     <header class="fixed-top">
@@ -57,20 +57,20 @@
 
         <nav id="responsive_nav" class="d-flex flex-column">
             <a href="estudios.html"><h3 class="text-left regular px-4 py-2">Estudios</h3></a>
-            <a href="competencias.html" class="section_selected"><h3 class="text-left regular px-4 py-2">Competencias</h3></a>
+            <a href="habilidades.html"><h3 class="text-left regular px-4 py-2">Habilidades</h3></a>
             <a href="#"><h3 class="text-left regular px-4 py-2">Sobre mí</h3></a>
         </nav>
     </header>
 
     <main>
         <section class="row justify-content-center bg_gray_dark">
-            <h2 class="text-center p-5">Competencias</h2>
+            <h2 class="text-center p-5">Habilidades</h2>
             <div class="divider"></div>
         </section>
         
         <section class="row justify-content-center bg_black">
             <p class="col-10 my-4 text-center">
-                Selecciona una competencia
+                Selecciona una habilidad
             </p>
             <div class="col-11 col-md-8 row mb-5">
                 <article class="light_border">
@@ -104,7 +104,7 @@
                         </p>
                         <p class="col-11 py-3">
                             En PHP, utilizado principalmente el framework de Laravel con Eloquent para obtener los datos de la DB.
-                            En Java, usando las clases apropiadas para hacer las aplicaciones(Servlets y JSPs) y confeccionar las consultas SQL a mano y lanzarlas contra la base de datos.
+                            En Java, usando las clases apropiadas para hacer las aplicaciones(servlets, filters y JSPs) y confeccionar las consultas SQL a mano y lanzarlas contra la base de datos.
                         </p>
                         <p class="col-11 py-3">
                             Algunos de los entornos que he utilizado son Eclipse(Java Web) y VS Code(PHP).
@@ -186,7 +186,7 @@
         
         <div class="flex-column flex_center gap-3 pb-5">
             <a href="estudios.html"><h3 class="extralight text_hover">Estudios</h3></a>
-            <a href="competencias.html"><h3 class="extralight text_hover">Competencias</h3></a>
+            <a href="habilidades.html"><h3 class="extralight text_hover">Habilidades</h3></a>
             <a href="#"><h3 class="extralight text_hover">Sobre mí</h3></a>
         </div>
         
@@ -229,39 +229,39 @@
     const lenguajes = {
         'HTML5' : {
             'title': 'HTML5',
-            'img': '../public/img/icons/html5.svg',
-            'level': 4,
-            'text': 'Manejo la estructura de marcado HTML. Desde la creación de un documento básico con header, secciones, footer, links e imágenes, hasta menús, formularios y demás multimedia.'
+            'img': 'public/img/icons/html5.svg',
+            'level': 5,
+            'text': 'Manejo la estructura de marcado HTML. Desde la creación de un documento básico con secciones, links e imágenes, hasta menús complejos, formularios y demás multimedia.'
         },
         'CSS3' : {
             'title': 'CSS3',
-            'img': '../public/img/icons/css3.svg',
+            'img': 'public/img/icons/css3.svg',
             'level': 4,
-            'text': 'CSS3'
+            'text': 'Experiencia creando estilos con un diseño responsive y la maquetación de páginas web utilizando flexbox, grid y animaciones.'
         },
         'JS' : {
             'title': 'JS',
-            'img': '../public/img/icons/js.svg',
+            'img': 'public/img/icons/js.svg',
             'level': 5,
-            'text': ''
+            'text': 'Desarrollar interacciones dinámicas en páginas web, incluyendo eventos concretos, AJAX y para mejorar el diseño responive.'
         },
         'JAVA' : {
             'title': 'JAVA',
-            'img': '../public/img/icons/java.svg',
+            'img': 'public/img/icons/java.svg',
             'level': 4,
             'text': 'Desarrollo de webs con cantenido dinámico mediante el flujo de modelo-vista-controlador, utilizando Servlets, filters, y JSPs (Java Server Pages). Realizar la comunicación la la base de datos con consultas SQL confeccionadas a mano.'
         },
         'PHP' : {
             'title': 'PHP',
-            'img': '../public/img/icons/php.svg',
+            'img': 'public/img/icons/php.svg',
             'level': 5,
-            'text': 'Desarrollo de la webs dinámicas mediante el flujo de modelo-vista-controlador, de manera rudimentaria y también utilizando el framework de Laravel. Manejar la comunicación  con la base de datos mediante migraciones y seeders de Eloquent. Crear vistas y secciones administrativas de la aplicación(panel admin).'
+            'text': 'Desarrollo de la webs dinámicas mediante el flujo de modelo-vista-controlador, de manera rudimentaria, y también utilizando el framework de Laravel. Manejar la comunicación con la base de datos mediante migraciones y seeders de Eloquent. Crear vistas y secciones administrativas de la aplicación(panel admin).'
         },
         'SQL': {
             'title': 'SQL',
-            'img': '../public/img/icons/sql.svg',
-            'level': 3,
-            'text': 'Manipular la base de datos mediante consultas SQL, realizando inserts, selects, updates, y deletes para obtener la información deseada. También sé utilizar joins y claves externas para lograr un esquema de datos complejos.'
+            'img': 'public/img/icons/sql.svg',
+            'level': 3.5,
+            'text': 'Manipular la base de datos mediante consultas SQL, realizando inserts, updates, deletes, y selects para obtener la información deseada. También sé utilizar joins y claves externas para lograr un esquema de datos complejos.'
         }
     }
     //1. end
@@ -271,7 +271,6 @@
     const lenguajes_buttons = document.getElementById('lenguajes_buttons');
     const lenguajes_content = document.getElementById('lenguajes_content');
     
-
     let current_lenguaje_selected;
 
     for (let key in lenguajes) {
@@ -314,7 +313,6 @@
 
             if(current_lenguaje_selected != null){
                 current_lenguaje_selected.classList.remove('lenguaje_selected');
-               
             }
             updateLenguaje(lenguajes[key]);
             
@@ -334,14 +332,12 @@
             document.getElementById('lenguaje_title').textContent = "";
             document.getElementById('lenguaje_text').textContent = "";
         }
- 
     }
-    
     
     // 2. end
 </script>
-<script src="../public/js/Icons.js"></script>
-<script src="../public/js/portfolio.js"></script>
+<script src="public/js/Icons.js"></script>
+<script src="public/js/portfolio.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         initPortfolio();
