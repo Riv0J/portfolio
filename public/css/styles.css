@@ -471,6 +471,9 @@ button{
         border-bottom: 0.2rem solid var(--main);
         border-left: none;
     }
+    .overflow_img{
+        transform: scale(1);
+    }
 }
 
 /* 1920px */
@@ -498,6 +501,9 @@ button{
         border-bottom: 0.2rem solid var(--main);
         border-left: none;
     }
+    .overflow_img{
+        transform: scale(1);
+    }
 }
 
 /* xl */
@@ -505,12 +511,18 @@ button{
     :root {
         font-size: 14px;
     }
+    .overflow_img{
+        transform: scale(1);
+    }
 }
 
 /* lg */
 @media screen and (max-width: 1200px) {
     :root {
         font-size: 14px;
+    }
+    .overflow_img{
+        transform: scale(1);
     }
 }
 
@@ -537,6 +549,9 @@ button{
         left: 0;
         border-bottom: 0.2rem solid var(--main);
         border-left: none;
+    }
+    .overflow_img{
+        transform: scale(1);
     }
 }
 
@@ -566,6 +581,9 @@ button{
         left: 0;
         border-bottom: none;
         border-left: 0.4rem solid var(--main);
+    }
+    .overflow_img{
+        transform: scale(1.05);
     }
 }
 
