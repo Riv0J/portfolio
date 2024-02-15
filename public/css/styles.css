@@ -85,6 +85,7 @@ ul>*{
     top: 0;
     left: 0;
     border-left: 0.5rem solid var(--main);
+    border-bottom: none;
 }
 .pdf_preview{
     position: relative;
@@ -160,6 +161,14 @@ button{
 #responsive_nav>*{
     display: none;
     border-bottom: 0.05rem solid var(--gray);
+}
+#desktop_nav h3{
+    font-size: 1rem;
+}
+#desktop_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .icon_title{
     display: flex;
@@ -424,11 +433,11 @@ button{
     transform: translate(0, -50%);
 }
 
-/* media queries */ 
+/* media queries */
 /* pantallas mayores de 1921px */ 
 @media screen and (min-width: 1921px) {
     :root {
-        font-size: 14px; /* Cambia el tamaño de fuente para pantallas más pequeñas */
+        font-size: 14px;
     }
     #logo{
         width: 4rem;
@@ -440,11 +449,34 @@ button{
     .sub_title{
         text-wrap: nowrap;
     }
+
+    /* responsive */
+    #desktop_nav{
+        display: flex;
+    }
+    #responsive_menu_button{
+        display: none;
+    }
+
+    .section_selected{
+        position: relative;
+    }
+    .section_selected::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 0.2rem solid var(--main);
+        border-left: none;
+    }
 }
 
+/* 1920px */
 @media screen and (max-width: 1920px) {
     :root {
-        font-size: 14px; /* Cambia el tamaño de fuente para pantallas más pequeñas */
+        font-size: 14px;
     }
     #logo{
         width: 2rem;
@@ -453,55 +485,94 @@ button{
         font-size: 1rem;
         gap: 1rem;
     }
+    #desktop_nav{
+        display: flex;
+    }
+    .section_selected::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 0.2rem solid var(--main);
+        border-left: none;
+    }
 }
 
 /* xl */
 @media screen and (max-width: 1400px) {
     :root {
-        font-size: 14px; /* Cambia el tamaño de fuente para pantallas más pequeñas */
+        font-size: 14px;
     }
 }
 
 /* lg */
 @media screen and (max-width: 1200px) {
     :root {
-        font-size: 14px; /* Cambia el tamaño de fuente para pantallas más pequeñas */
+        font-size: 14px;
     }
 }
 
 /* md */
 @media screen and (max-width: 992px) {
     :root {
-        font-size: 14px; /* Cambia el tamaño de fuente para pantallas más pequeñas */
+        font-size: 14px;
     }
     #responsive_menu_button{
         display: none;
     }
-    #desktop_menu{
+    #desktop_nav{
         display: flex;
+    }
+    .section_selected{
+        position: relative;
+    }
+    .section_selected::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 0.2rem solid var(--main);
+        border-left: none;
     }
 }
 
 /* sm */
 @media screen and (max-width: 768px ) {
     :root {
-        font-size: 14px; /* Cambia el tamaño de fuente para pantallas más pequeñas */
+        font-size: 14px;
+    }
+    .sub_title{
+        text-wrap: wrap;
     }
     #responsive_menu_button{
         display: flex;
     }
-    #desktop_menu{
+    #desktop_nav{
         display: none;
     }
-    .sub_title{
-        text-wrap: wrap;
+    .section_selected{
+        position: relative;
+    }
+    .section_selected::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: none;
+        border-left: 0.4rem solid var(--main);
     }
 }
 
 /* xs */
 @media screen and (max-width: 576px){
     :root {
-        font-size: 14px; /* Cambia el tamaño de fuente para pantallas más pequeñas */
+        font-size: 14px;
     }
 }
 

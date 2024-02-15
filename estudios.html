@@ -34,7 +34,7 @@
 <body>
     <header class="fixed-top">
         <div id="responsive_header" class="d-flex flex-row justify-content-between px-3 py-2">
-            <aside>
+            <aside class="row">
                 <a href="index.html" id="nombre" class="d-flex flex-row align-items-center justify-content-start app_hover">
                     <div id="logo" class="halo d-flex align-items-center justify-content-center">
                         <svg class="app_svg app_hover" viewBox="0 0 485.688 485.688">
@@ -53,26 +53,32 @@
             <button id="responsive_menu_button" class="flex_center app_hover">
                 <i data_icon_name="burger_menu"></i>
             </button>
+
+            <nav id="desktop_nav" class="flex-row">
+                <a href="estudios.html"><h3 class="section_selected app_hover text-center regular px-4 py-2">Estudios</h3></a>
+                <a href="habilidades.html"><h3 class="app_hover text-center regular px-4 py-2">Habilidades</h3></a>
+                <a href="#"><h3 class="app_hover text-center regular px-4 py-2">Sobre mí</h3></a>
+            </nav>
         </div>
 
         <nav id="responsive_nav" class="d-flex flex-column">
-            <a href="estudios.html"><h3 class="text-left regular px-4 py-2">Estudios</h3></a>
+            <a href="estudios.html"><h3 class="section_selected text-left regular px-4 py-2">Estudios</h3></a>
             <a href="habilidades.html"><h3 class="text-left regular px-4 py-2">Habilidades</h3></a>
             <a href="#"><h3 class="text-left regular px-4 py-2">Sobre mí</h3></a>
         </nav>
     </header>
 
-    <main>
+    <main class="flex_center flex-column">
         <section class="row justify-content-center bg_black">
-            <h2 class="text-center pt-5">Estudios</h2>
-            <p class="p-5">Aquí tienes mi experiencia de competencias técnicas y reflexiones luego de cursar DAW en el Centro San Luis de Bilbao.</p>
+            <h2 class="text-center pt-5 col-12">Estudios</h2>
+            <p class="p-5 col-12 col-lg-6">Aquí tienes mi experiencia de competencias técnicas y reflexiones luego de cursar DAW en el Centro San Luis de Bilbao.</p>
             <div class="divider"></div>
         </section>
 
         <section class="row justify-content-center bg_gray_dark">
-            <h2 class="text-center py-5">Desarrollo de Aplicaciones Web</h2>
-            <h4 class="text-center px-5">Formación Profesional Superior</h4>
-            <div class="px-5">
+            <h2 class="text-center py-5 col-12">Desarrollo de Aplicaciones Web</h2>
+            <h4 class="text-center px-5 col-12">Formación Profesional Superior</h4>
+            <div class="row px-5 col-12 col-lg-8 flex_center">
                 <p class="py-3">
                     El trabajo final de primero de DAW consistió en el desarrollo de un sitio web de escape rooms online. 
                 </p>
@@ -88,7 +94,7 @@
                     <li>Servidor en máquina virtual</li>
                     <li>Web multilingüe</li>
                 </ul>
-                <a href="public/docs/Reto_DAW1.pdf" class="container_hover" target="_blank">
+                <a href="public/docs/Reto_DAW1.pdf" class="container_hover col-12 col-lg-6 pb-5" target="_blank">
                     <p class="text-center py-3">Requerimientos de la aplicación</p>
                     <div class="pdf_preview">
                         <img src="public/img/estudios/Preview_DAW1.png" alt="Preview DAW1">
@@ -96,6 +102,7 @@
                     
                     <p class="text-center py-2">Pincha para ver el documento</p>
                 </a>
+                <div class="divider_gray"></div>
                 <p class="py-3">
                     Tuvimos una entrevista con un cliente, el cual nos explicó sus necesidades. Algunas eran, por ejemplo, de que la aplicación debería ser multilingue y que se debían poder hacer reservas para salas físicas.
                 </p>
@@ -103,68 +110,67 @@
                     A raiz de todo esto, para empezar el proyecto creamos un enunciado el cual debíamos cumplir hasta el final (el análisis de la aplicación, con su diagrama de clases y casos de uso).
                 </p>
             </div>
-            <div class="row flex_center px-5 text-nowrap py-5">
-                <a href="https://github.com/Riv0J/java_web_BilboSKP" target="_blank" class="app_color_button">Ver el proyecto en GitHub</a>
+            <div class="row flex_center px-5 text-nowrap py-5 ">
+                <a href="https://github.com/Riv0J/java_web_BilboSKP" target="_blank" class="app_color_button col-10 col-lg-4">Ver el proyecto en GitHub</a>
             </div>
-            <div class="divider"></div>
         </section>
         <section class="row justify-content-center bg_black">
-            <h2 class="text-center py-5">Reflexiones Técnicas</h2>
+            <h2 class="text-center py-5 col-12">Reflexiones Técnicas</h2>
             <div class="divider"></div>
         </section>
         
-        <section class="row justify-content-center bg_gray_dark px-5">
-            <h2 class="text-center py-5">Análisis</h2>
-            <p class="py-3">
+        <section class="row justify-content-center bg_gray_dark px-5 flex_center">
+            <h2 class="text-center py-5 col-12">Análisis</h2>
+            <p class="py-3 col-12 col-lg-8">
                 Realizar el análisis funcional de la aplicación, que incluye:
             </p>
-            <ul class="list py-3">
+            <ul class="list py-3 col-12 col-lg-10">
                 <li>Enunciado formal</li>
                 <li>Casos de uso(con sus diagramas)</li>
                 <li>Diagrama de clases</li>
             </ul>
 
-            <a href="public/docs/Analisis_DAW1.pdf" class="container_hover pb-5" target="_blank">
+            <a href="public/docs/Analisis_DAW1.pdf" class="container_hover col-12 col-lg-6 pb-5" target="_blank">
                 <div class="pdf_preview">
                     <img src="public/img/estudios/Analisis_DAW1.png" alt="Preview Análisis DAW1">
                 </div>
                 
                 <p class="text-center py-2">Pincha para ver el documento</p>
             </a>
-
+            <div></div>
             <div class="divider"></div>
         </section>
 
         <section class="row justify-content-center bg_black">
-            <h2 class="text-center py-5">Front-end</h2>
-            <p class="py-3 px-5">
+            <h2 class="text-center py-5 col-12">Front-end</h2>
+            <p class="py-5 px-5 col-12 col-lg-8">
                 Introducción a HTML y CSS, maquetación de mock-ups, wireframes y lenguaje de marcas.
             </p>
     
-            <img src="public/img/estudios/wireframe_1.png" alt="Wireframe 1" class="overflow_img">
-            <p class="text-center py-3 px-5">Wireframe temprano de la aplicación</p>
-            <img src="public/img/estudios/BILBOSKP_SC2.png" alt="Wireframe 1" class="pt-4 overflow_img">
-            <p class="text-center py-3 px-5 pb-5">Estilo final de la misma sección</p>
+            <img src="public/img/estudios/wireframe_1.png" alt="Wireframe 1" class="overflow_img col-12 col-lg-6">
+            <p class="text-center py-3 px-5 col-12">Wireframe temprano de la aplicación</p>
+            <img src="public/img/estudios/BILBOSKP_SC2.png" alt="Wireframe 1" class="pt-5 overflow_img col-12 col-lg-10">
+            <p class="text-center py-3 px-5 pb-5 col-12">Estilo final de la misma sección</p>
             <div class="divider"></div>
         </section>
 
         <section class="row justify-content-center bg_gray_dark px-5">
-            <h2 class="text-center py-5">Back-end</h2>
-            <p class="py-3 px-2">
+            <h2 class="text-center py-5 col-12">Back-end</h2>
+            <p class="py-3 px-2 col-12 col-lg-8">
                 Introducción a la programación orientada a objetos con Java. Desarrollo de la web del lado del servidor, manipulación de base de datos SQL.
             </p>
-            <p class="py-3 px-2">
+            <p class="py-3 px-2 col-12 text-center">
                 Échale un ojo al resultado final:
             </p>
         </section>
         
-        <video width="100%" height="auto" controls class="px-2">
+        <video width="100%" height="auto" controls class="px-2 col-12 col-lg-8 py-lg-3">
             <source src="public/videos/BilboSKP- Preview.mp4" type="video/mp4">
             Este navegador no admite el video.
         </video>
 
-        <section class="row justify-content-center bg_black px-5">
-            <p class="text-center py-2">Video mostrando el proyecto presentado al final del curso</p>
+        <section class="row justify-content-center bg_black px-5 mt-5">
+            <p class="text-center py-lg-3 pt-0">Video mostrando el proyecto presentado al final del curso</p>
         </section>
         
     </main>
