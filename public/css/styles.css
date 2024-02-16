@@ -632,3 +632,15 @@ button{
 .bg_black {
     background-color: var(--black);
 }
+
+.color_main {
+    color: var(--main);
+}
+
+.color_alt_dark {
+    color: var(--main_alt_dark);
+}
+
+.color_alt_soft {
+    color: var(--main_alt_soft);
+}

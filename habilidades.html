@@ -172,6 +172,7 @@
                     <h4 class="code_reveal_effect col-12 text-center bold" id="lenguaje_title"></h4>
                     <div class="divider_gray"></div>
                     <p class="col-10 col-md-12" id="lenguaje_text"></p>
+                    <div class="row flex-row col-6 text-center bold gap-2" id="lenguaje_level"></div>
                 </div> 
                 
             </div>
@@ -274,7 +275,8 @@
     const lenguajes_container = document.getElementById('lenguajes_container');
     const lenguajes_buttons = document.getElementById('lenguajes_buttons');
     const lenguajes_content = document.getElementById('lenguajes_content');
-    
+    const lenguaje_level = document.getElementById('lenguaje_level');
+
     let current_lenguaje_selected;
 
     for (let key in lenguajes) {
@@ -299,11 +301,19 @@
             }
         };
 
+
+
         let span = document.createElement('span');
         span.textContent = key;
 
         box.appendChild(span);
         lenguajes_buttons.appendChild(box);
+
+        //asignar el lenguaje predeterminado el HTML5
+        if(key === 'HTML5'){
+            current_lenguaje_selected = box;
+            box.classList.toggle('lenguaje_selected');;
+        }
 
         //agregar el listener
         box.addEventListener('click', function(){
@@ -332,12 +342,38 @@
         if(lenguaje){
             document.getElementById('lenguaje_title').textContent = lenguaje['title'];
             document.getElementById('lenguaje_text').textContent = lenguaje['text'];
+
+            //crear las estrellas
+            show_level(lenguaje['level']);
         } else {
             document.getElementById('lenguaje_title').textContent = "";
             document.getElementById('lenguaje_text').textContent = "";
         }
     }
+
     
+    
+    function show_level(level_number){
+        while (lenguaje_level.firstChild) {
+            lenguaje_level.removeChild(lenguaje_level.firstChild);
+        }
+
+        const max_level = 5;
+        for (let index = 0; index < max_level; index++) {
+
+            const iconoEstrella = document.createElement('i');
+            iconoEstrella.classList.add('col-2');
+            iconoEstrella.classList.add('color_alt_soft');
+            
+            if(index < level_number){
+                iconoEstrella.classList.add('ri-star-fill');
+                
+            } else{
+                iconoEstrella.classList.add('ri-star-line');
+            }
+            lenguaje_level.appendChild(iconoEstrella);
+        }
+    }
     // 2. end
 </script>
 <script src="public/js/Icons.js"></script>
