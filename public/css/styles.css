@@ -432,7 +432,17 @@ button{
     border-top: 0.5rem solid var(--gray);
     transform: translate(0, -50%);
 }
-
+.divider_block_bot{
+    border-radius: 1rem;
+    border-top: 0.5rem solid orange;
+    transform: translate(0, -50%);
+}
+.horizontal_divider{
+    width: 0.5rem;
+    height: 100%;
+    border-left: 0.25rem solid var(--gray);
+    transform: translate(100%,0);
+}
 /* media queries */
 /* pantallas mayores de 1921px */ 
 @media screen and (min-width: 1921px) {
